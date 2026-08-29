@@ -1,0 +1,89 @@
+.pipeline {
+  min-height: 160svh;
+}
+
+.pipeline__title {
+  margin-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  max-width: 12ch;
+}
+
+.pipeline__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 1.25rem;
+}
+
+.pipeline__line {
+  position: relative;
+  width: 1px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.pipeline__progress {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0.25));
+  will-change: transform;
+}
+
+.pipeline__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(1.75rem, 4vh, 3rem);
+}
+
+.pipeline__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  will-change: transform, opacity;
+}
+
+.pipeline__node {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #0b0c0f;
+}
+
+.pipeline__node span {
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pipeline__q {
+  margin: 0.45rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 3.2vw, 2.4rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  max-width: 18ch;
+}
+
+.pipeline__arrow {
+  grid-column: 2;
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+  .pipeline__track {
+    grid-template-columns: 1.25rem 1fr;
+  }
+}
