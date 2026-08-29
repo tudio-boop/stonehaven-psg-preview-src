@@ -1,0 +1,84 @@
+.problem {
+  min-height: 120svh;
+}
+
+.problem__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.problem__title {
+  font-size: clamp(2rem, 5.4vw, 4.2rem);
+}
+
+.problem__body {
+  margin: 1.25rem 0 0;
+  max-width: 28rem;
+  color: var(--muted);
+}
+
+.persona-field {
+  position: relative;
+  aspect-ratio: 1.15 / 1;
+  min-height: 340px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at 30% 35%, rgba(255, 255, 255, 0.05), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 55%),
+    #0c0d10;
+  overflow: hidden;
+}
+
+.persona-field__box {
+  position: absolute;
+  left: 28%;
+  top: 28%;
+  width: 30%;
+  height: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  place-items: start;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  transform-origin: 50% 50%;
+  will-change: transform, opacity, border-radius;
+}
+
+.persona-field__pt {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  user-select: none;
+  will-change: transform, opacity, color;
+}
+
+.persona-field__pt.is-demand {
+  color: #fff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+.persona-field__label {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .problem__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-field {
+    aspect-ratio: 1 / 1.05;
+  }
+}
