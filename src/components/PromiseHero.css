@@ -1,0 +1,72 @@
+.promise {
+  min-height: 100svh;
+  display: grid;
+  align-items: end;
+  padding-top: calc(6.5rem + var(--safe-top));
+  padding-bottom: clamp(3rem, 10vh, 6rem);
+}
+
+.promise__inner {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.promise__id {
+  margin-bottom: clamp(3rem, 12vh, 8rem);
+}
+
+.promise__statement {
+  margin: 0;
+  font-size: var(--step-hero);
+  max-width: 11ch;
+}
+
+.promise__statement span {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.promise__breath {
+  margin-top: clamp(2.5rem, 8vh, 5rem);
+  opacity: 0.5;
+}
+
+@media (min-width: 721px) {
+  .promise {
+    align-items: center;
+    padding-bottom: clamp(2rem, 6vh, 4rem);
+  }
+
+  .promise__id {
+    margin-bottom: clamp(2rem, 6vh, 4rem);
+  }
+
+  .promise__breath {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.promise__glyph {
+  position: absolute;
+  right: 0;
+  top: 18%;
+  font-size: clamp(4rem, 14vw, 10rem);
+  font-family: var(--display);
+  color: rgba(255, 255, 255, 0.06);
+  line-height: 1;
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 720px) {
+  .promise__statement {
+    max-width: none;
+  }
+
+  .promise__glyph {
+    top: 8%;
+    right: -0.2rem;
+  }
+}
