@@ -1,0 +1,1 @@
+.site-footer{border-top:1px solid rgba(255,255,255,0.1);padding:2rem 0 calc(2rem+var(--safe-bottom));}.site-footer__inner{display:flex;justify-content:space-between;gap:1.5rem;align-items:end;flex-wrap:wrap;}.site-footer strong{display:block;font-family:var(--display);letter-spacing:0.18em;font-size:0.95rem;margin-bottom:0.35rem;}.site-footer .mono-note{margin:0;}
