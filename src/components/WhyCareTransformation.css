@@ -1,0 +1,52 @@
+.why {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+}
+
+.why__stage {
+  min-height: 72svh;
+  display: grid;
+  align-content: center;
+}
+
+.why__stack {
+  position: relative;
+  min-height: clamp(16rem, 48vh, 26rem);
+}
+
+.why__before,
+.why__after {
+  margin: 0;
+  position: absolute;
+  inset: auto 0;
+  display: grid;
+  gap: 0.08em;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.8rem, 11vw, 8rem);
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.why__word {
+  display: block;
+  will-change: transform, opacity, filter;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why__before {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .why__after {
+    position: relative;
+  }
+
+  .why__after .why__word {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
